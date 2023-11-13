@@ -25,8 +25,10 @@ def is_palindrome(num):
     # Reverse the string
     reversed_str = str_number[::-1]
     
+
     # Check if the original and reversed strings are the same
-    return str_number == reversed_str
+    res = '' if str_number == reversed_str else 'not'
+    return  f"{str_number} is {res} a palindrome"
 
 def action(num, check):
     if check == 'sum_digits':
