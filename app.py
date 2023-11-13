@@ -57,7 +57,19 @@ def check():
     except Exception as e:
         return render_template("index.html", res=f"Error: {str(e)}", check_enabled=False)
 
+@app.route("/zip", methods=["POST"])
+def zip_iterables():
+    try:
+        iter1 = request.form.get('iter1').split(',')
+        iter2 = request.form.get('iter2').split(',')
 
+        # Call the myzip function
+        result = myzip(iter1, iter2)
+
+        return render_template("index.html", zip_result=f"Zip Result: {result}")
+
+    except Exception as e:
+        return render_template("index.html", zip_result=f"Error: {str(e)}")
 
 
 if __name__ == "__main__":
