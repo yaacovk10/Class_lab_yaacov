@@ -27,3 +27,9 @@ def is_palindrome(num):
     
     # Check if the original and reversed strings are the same
     return str_number == reversed_str
+
+def action(num, check):
+    if check == 'sum_digits':
+        return sumofdigits(num)
+    elif check == 'palindrome':
+        return is_palindrome(num)

@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     Hello
+    <h1>Simple functions</h1>
+    <form action="/calculate" method="post">
+        <label for="number1">Number 1:</label>
+        <input type="text" id="number1" name="number1">
+        <label for="number2">Number 2:</label>
+        <input type="text" id="number2" name="number2">
+        <button type="submit" name="operation" value="sum">SUM</button>
+        <button type="submit" name="operation" value="subtract">SUBTRACTION</button>
+    </form>
+    <div id="result">{{ result }}</div>
+
+    <h2>Comp functions</h2>
+    <form action="/check" method="post">
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number">
+        <button type="submit" name="operation2" value="sum_digits">SUM Digits</button>
+        <button type="submit" name="operation2" value="palindrome">Palindrome</button>
+    </form>
+    <div id="chek">{{ res }}</div>
+
 </body>
+
 </html>
